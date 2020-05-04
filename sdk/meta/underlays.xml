@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facedata PUBLIC "-//grimace//DTD facedata 0.1//EN"
+  "http://grimace-project.net/dtd/facedata01.dtd">
+<facedata>
+	<!-- ++++++++++++++++++++++ -->
+	<!--      UNDERLAYS         -->
+	<!-- ++++++++++++++++++++++ -->
+	<underlays>
+		<underlaygroup id="neutral" base_url="../meta/mccloud/">
+			<image id='neutral' url="neutral.png" dx="32" dy="-26" scale="0.60" alpha="0.50"/>
+		</underlaygroup> 
+		<underlaygroup id="joy" base_url="../meta/mccloud/">
+			<image id='joy1' url="joy1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='joy2' url="joy2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='joy3' url="joy3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='joy4' url="joy4.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="surprise" base_url="../meta/mccloud/">
+			<image id='surprise1' url="surprise1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='surprise2' url="surprise2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='surprise3' url="surprise3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='surprise4' url="surprise4.png" dx="-40" dy="-102" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="fear" base_url="../meta/mccloud/">
+			<image id='fear1' url="fear1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='fear2' url="fear2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='fear3' url="fear3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='fear4' url="fear4.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="sadness" base_url="../meta/mccloud/">
+			<image id='sadness1' url="sadness1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='sadness2' url="sadness2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='sadness3' url="sadness3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='sadness4' url="sadness4.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="disgust" base_url="../meta/mccloud/">
+			<image id='disgust1' url="disgust1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='disgust2' url="disgust2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='disgust3' url="disgust3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='disgust4' url="disgust4.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="anger" base_url="../meta/mccloud/">
+			<image id='anger1' url="anger1.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='anger2' url="anger2.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='anger3' url="anger3.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+			<image id='anger4' url="anger4.png" dx="-35" dy="-105" scale="3.5" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="general" base_url="../meta/">
+			<image id='facemap' url="facemap.png"   dx="50" dy="50" scale="1.0" alpha="1.0"/>
+			<image id='musclemap' url="musclemap.png" dx="8" dy="-38" scale="1.0" alpha="1.0"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed joy" base_url="../meta/mccloud/secondaries/">
+			<image id='joy + surprise = “amazement”' url="face_JO+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='joy + fear = “desperation”' url="face_FE+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='joy + sadness = “faint hope”' url="face_JO+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='joy + disgust = “eeww!”' url="face_DI+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='joy + anger = “cruelty”' url="face_AN+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed surprise" base_url="../meta/mccloud/secondaries/">
+			<image id='surprise + fear = “spooked”' url="face_FE+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='surprise + sadness = “disappointment”' url="face_SA+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='surprise + disgust = “you ate it??”' url="face_DI+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='surprise + anger = “what the --?!”' url="face_AN+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='surprise + joy = “amazement”' url="face_JO+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed fear" base_url="../meta/mccloud/secondaries/">
+			<image id='fear + sadness = “devastation”' url="face_FE+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='fear + disgust = “horror”' url="face_DI+FE.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='fear + anger = “caged animal”' url="face_AN+FE.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='fear + joy = “desperation”' url="face_FE+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='fear + surprise = “spooked”' url="face_FE+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed sadness" base_url="../meta/mccloud/secondaries/">
+			<image id='sadness + disgust = “pain empathy”' url="face_DI+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='sadness + anger = “betrayal”' url="face_AN+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='sadness + joy = “faint hope”' url="face_JO+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='sadness + surprise = “disappointment”' url="face_SA+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='sadness + fear = “devastation”' url="face_FE+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed disgust" base_url="../meta/mccloud/secondaries/">
+			<image id='disgust + anger = “outrage”' url="face_AN+DI.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='disgust + joy = “eeww!”' url="face_DI+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='disgust + surprise = “you ate it??”' url="face_DI+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='disgust + fear = “horror”' url="face_DI+FE.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='disgust + sadness = “pain empathy”' url="face_DI+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+		<underlaygroup id="mixed anger" base_url="../meta/mccloud/secondaries/">
+			<image id='anger + joy = “cruelty”' url="face_AN+JO.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='anger + surprise = “what the --?!”' url="face_AN+SU.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='anger + fear = “caged animal”' url="face_AN+FE.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='anger + sadness = “betrayal”' url="face_AN+SA.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+			<image id='anger + disgust = “outrage”' url="face_AN+DI.png" dx="37" dy="-24" scale="0.89" alpha="0.5"/>
+		</underlaygroup> 
+	</underlays>
+</facedata>

@@ -1,0 +1,8 @@
+# mxmlc binary path
+flex.mxmlc = /Applications/FlexSDK/bin/mxmlc
+
+# asdoc binary path
+flex.asdoc = /Applications/FlexSDK/bin/asdoc
+
+# adt binary path (distribution needs to include iOS support)
+flex.adt = /Applications/AdobeAIRSDK/bin/adt

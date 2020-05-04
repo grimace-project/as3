@@ -1,0 +1,113 @@
+<project name="grimace" default="compile">
+	<property name="dest.dir" value="bin" />
+	<property file="./local.properties" />
+	<property file="./buildasdoc.properties" />
+	
+	<target name="init">
+		<delete dir="${dest.dir}" />
+		<mkdir dir="${dest.dir}" />
+		<!-- <copy file="src/facedata.xml" todir="${dest.dir}"/>
+		<copy file="src/facemap.png" todir="${dest.dir}" />
+		<copy file="src/musclemap.png" todir="${dest.dir}" />
+		<copy file="src/FaceOutline.swf" todir="${dest.dir}" /> -->
+		<!-- <copy todir="${dest.dir}">
+			<fileset dir="meta">
+				<exclude name="**/mappings/*" />
+				<exclude name="*mappings*" />
+			</fileset>
+		</copy> -->
+		<!-- asdoc init -->
+
+	</target>
+	
+	<target name="compile" depends="init">
+		<exec executable="${flex.mxmlc}" failonerror="true">
+			<arg line="-output '${dest.dir}/grimace.swf'" />
+			<arg line="-use-network=false" />
+			<arg line="-static-link-runtime-shared-libraries=true" />
+			<arg line="-define+=CONFIG::includeSWF,true" />
+			<arg line="src/as3/MainGrimace.as" />
+		</exec>
+		<exec executable="${flex.mxmlc}" failonerror="true">
+			<arg line="-output '${dest.dir}/facemap.swf'" />
+			<arg line="-use-network=false" />
+			<arg line="-static-link-runtime-shared-libraries=true" />
+			<arg line="-define+=NAMES::metaUrlPrefix,&quot;'../meta/'&quot;" />
+			<arg line="-define+=CONFIG::includeSWF,true" />
+			<arg line="src/as3/Main.as" />
+		</exec>
+	</target>
+	
+	
+	<!-- <target name="open" depends="compile"> -->
+		<!-- <exec executable="open">
+			<arg line="bin/Facemap.swf" />
+		</exec> -->
+	<!-- </target> -->
+	
+	<property name="demos.dir" value="demos"/>
+	
+	<target name="demos" depends="compile">
+		<exec executable="${flex.mxmlc}" failonerror="true">
+			<arg line="-output '${demos.dir}/as3/Demo.swf'" />
+			<arg line="-use-network=false" />
+			<arg line="-static-link-runtime-shared-libraries" />
+			<arg line="demos/as3/Demo.as" />
+		</exec>
+		<exec executable="${flex.mxmlc}" failonerror="true">
+			<arg line="-output '${demos.dir}/as3/DemoLoadXML.swf'" />
+			<arg line="-use-network=false" />
+			<arg line="-static-link-runtime-shared-libraries" />
+			<arg line="demos/as3/DemoLoadXML.as" />
+		</exec>
+		<exec executable="${flex.mxmlc}" failonerror="true">
+			<arg line="-output '${demos.dir}/flex/demo.swf'" />
+			<arg line="-use-network=false" />
+			<arg line="-static-link-runtime-shared-libraries" />
+			<arg line="demos/flex/demo.mxml" />
+		</exec>
+	</target>
+	
+	<property name="deploy.dir" value="deploy"/>
+	
+	<target name="deploy" depends="demos">
+		<delete dir="${deploy.dir}" />
+		<mkdir dir="${deploy.dir}" />
+		<copy todir="${deploy.dir}/bin">
+			<fileset dir="bin"></fileset>
+		</copy>
+		<copy todir="${deploy.dir}/meta">
+			<fileset dir="meta">
+				<exclude name="mccloud/**" />
+				<exclude name="underlays.xml" />
+				<exclude name="musclemap.png" />
+				<exclude name="facemap.png" />
+			</fileset>
+		</copy>
+		<copy todir="${deploy.dir}/demos">
+			<fileset dir="demos"></fileset>
+		</copy>
+		<copy file="SaveFile.php" todir="${deploy.dir}" />
+		<copy file="README" todir="${deploy.dir}" />
+		<copy file="CHANGELOG" todir="${deploy.dir}" />
+		<copy todir="${deploy.dir}/docs">
+			<fileset dir="docs"></fileset>
+		</copy>
+	</target>
+	
+	<target name="asdoc_init">
+		<delete dir="./${outputfolder}" failOnError="false" includeEmptyDirs="true"/>
+		<mkdir dir ="./${outputfolder}" />
+	</target>
+	
+	<target name="asdoc" depends="asdoc_init">
+		<exec executable="${flex.asdoc}" failonerror="true">
+			<arg line='-source-path ${src}' />
+			<arg line='-doc-sources ${domainextensions}'/>
+			<arg line='-main-title "${title}"' />
+			<arg line='-window-title "${title}"' />
+			<arg line='-output ${outputfolder}' />
+		</exec>
+	</target>
+	
+</project>
